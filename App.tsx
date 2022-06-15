@@ -18,7 +18,9 @@ import {
   useColorScheme,
   View,
   TouchableOpacity,
+  Image,
 } from 'react-native';
+import {GOOGLE_ICON, FB_ICON, APPLE_ICON} from './constatnts';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -48,6 +50,32 @@ const App = () => {
         <TouchableOpacity style={styles.button} onPress={() => {}}>
           <Text style={styles.buttonText}>Sign in</Text>
         </TouchableOpacity>
+        <View style={styles.socialIconsRow}>
+          <View style={styles.iconsContainer}>
+            <Image
+              style={styles.iconImage}
+              source={{
+                uri: GOOGLE_ICON,
+              }}
+            />
+          </View>
+          <View style={styles.iconsContainer}>
+            <Image
+              style={styles.iconImage}
+              source={{
+                uri: FB_ICON,
+              }}
+            />
+          </View>
+          <View style={styles.iconsContainer}>
+            <Image
+              style={styles.iconImage}
+              source={{
+                uri: APPLE_ICON,
+              }}
+            />
+          </View>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -63,7 +91,7 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     fontSize: 30,
     textAlign: 'center',
-    fontFamily: 'Outfit-Bold',
+    fontFamily: 'Outfit-ExtraBold',
   },
   content: {
     color: '#000000',
@@ -81,7 +109,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontSize: 15,
     borderRadius: 15,
-    marginBottom: 10,
+    marginBottom: 12,
     paddingLeft: 20,
     shadowColor: 'black',
     shadowOpacity: 0.2,
@@ -100,7 +128,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   button: {
-    marginTop: 50,
+    marginTop: 40,
     backgroundColor: '#F89AEE',
     height: 60,
     justifyContent: 'center',
@@ -112,6 +140,21 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: '900',
     fontSize: 22,
+  },
+  iconsContainer: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#ECE9EC',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 7,
+  },
+  iconImage: {width: 30, height: 30},
+  socialIconsRow: {
+    flexDirection: 'row',
+    marginTop: 40,
+    justifyContent: 'center',
   },
 });
 
