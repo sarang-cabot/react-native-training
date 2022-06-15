@@ -17,6 +17,7 @@ import {
   TextInput,
   useColorScheme,
   View,
+  TouchableOpacity,
 } from 'react-native';
 
 const App = () => {
@@ -44,6 +45,9 @@ const App = () => {
           />
           <Text style={styles.forgotPasswort}>Forgot Password ?</Text>
         </View>
+        <TouchableOpacity style={styles.button} onPress={() => {}}>
+          <Text style={styles.buttonText}>Sign in</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -52,6 +56,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
+    height: '100%',
   },
   heading: {
     color: '#464444',
@@ -70,6 +75,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Outfit-Bold',
   },
   textInput: {
+    height: 60,
     backgroundColor: '#F3F3F3',
     fontFamily: 'Outfit-Bold',
     fontWeight: '700',
@@ -92,6 +98,20 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     marginHorizontal: 20,
+  },
+  button: {
+    marginTop: 50,
+    backgroundColor: '#F89AEE',
+    height: 60,
+    justifyContent: 'center',
+    marginHorizontal: 10,
+    borderRadius: 15,
+  },
+  buttonText: {
+    color: '#FFFFFF',
+    textAlign: 'center',
+    fontWeight: '900',
+    fontSize: 22,
   },
 });
 
