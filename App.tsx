@@ -42,6 +42,7 @@ const App = () => {
             placeholder="Password"
             placeholderTextColor="#666161"
           />
+          <Text style={styles.forgotPasswort}>Forgot Password ?</Text>
         </View>
       </View>
     </SafeAreaView>
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     color: '#464444',
-    fontWeight: '700',
+    fontWeight: '900',
     fontSize: 30,
     textAlign: 'center',
     fontFamily: 'Outfit-Bold',
@@ -64,14 +65,14 @@ const styles = StyleSheet.create({
     marginHorizontal: 30,
     marginVertical: 20,
     textAlign: 'center',
-    fontWeight: '300',
+    fontWeight: '500',
     fontSize: 13,
     fontFamily: 'Outfit-Bold',
   },
   textInput: {
     backgroundColor: '#F3F3F3',
     fontFamily: 'Outfit-Bold',
-    fontWeight: '500',
+    fontWeight: '700',
     fontSize: 15,
     borderRadius: 15,
     marginBottom: 10,
@@ -81,6 +82,13 @@ const styles = StyleSheet.create({
     shadowOffset: {width: -2, height: 4},
     shadowRadius: 3,
     elevation: 3,
+  },
+  forgotPasswort: {
+    textAlign: 'right',
+    color: '#2D2626',
+    fontFamily: 'Outfit-Bold',
+    fontWeight: '700',
+    fontSize: 15,
   },
   inputContainer: {
     marginHorizontal: 20,
